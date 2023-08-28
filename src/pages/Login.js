@@ -65,6 +65,7 @@ const Login = ({ login, isAuthenticated }) => {
           "sldkfl45sl0sk2" + user.email + "sfljk4234kl234sl234kj"
         );
         localStorage.setItem("email", user.email);
+        localStorage.setItem("id", user.id);
         history.push("/trainerpanel");
       } else {
         window.alert("Invalid credentials");

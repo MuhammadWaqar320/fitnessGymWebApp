@@ -36,7 +36,7 @@ const Services = () => {
                 <p className="card-text">
                   Personalized advice on your routine.
                 </p>
-                <Button title="More information" />
+               
               </div>
             </div>
           </div>
@@ -52,7 +52,7 @@ const Services = () => {
               <div className="card-body">
                 <h5 className="card-title title">Dumbbell zone</h5>
                 <p className="card-text">Space with lots of dumbbells.</p>
-                <Button title="Más información" />
+            
               </div>
             </div>
           </div>
@@ -70,7 +70,7 @@ const Services = () => {
                 <p className="card-text">
                   Space with different cardio machines.
                 </p>
-                <Button title="Más información" />
+             
               </div>
             </div>
           </div>
@@ -94,7 +94,7 @@ const Services = () => {
                 <p className="card-text">
                   Personalized advice on your routine.
                 </p>
-                <Button title="More information" />
+              
               </div>
             </div>
           </div>
@@ -111,7 +111,7 @@ const Services = () => {
               <div className="card-body">
                 <h5 className="card-title title">Dumbbell zone</h5>
                 <p className="card-text">Space with lots of dumbbells.</p>
-                <Button title="Más información" />
+             
               </div>
             </div>
           </div>
@@ -130,7 +130,7 @@ const Services = () => {
                 <p className="card-text">
                   Space with different cardio machines.
                 </p>
-                <Button title="Más información" />
+             
               </div>
             </div>
           </div>
@@ -154,7 +154,7 @@ const Services = () => {
                 <p className="card-text">
                   Personalized advice on your routine.
                 </p>
-                <Button title="More information" />
+             
               </div>
             </div>
           </div>
@@ -171,7 +171,7 @@ const Services = () => {
               <div className="card-body">
                 <h5 className="card-title title">Dumbbell zone</h5>
                 <p className="card-text">Space with lots of dumbbells.</p>
-                <Button title="Más información" />
+             
               </div>
             </div>
           </div>
@@ -190,7 +190,7 @@ const Services = () => {
                 <p className="card-text">
                   Space with different cardio machines.
                 </p>
-                <Button title="Más información" />
+              
               </div>
             </div>
           </div>

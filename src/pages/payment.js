@@ -33,7 +33,7 @@ function PaymentReport() {
     }
   };
   useEffect(() => {
-    const PaymentReportCollectionRef = collection(db, "payment");
+    const PaymentReportCollectionRef = collection(db, "subscription");
     const getDataFromDb = async () => {
       const data = await getDocs(PaymentReportCollectionRef);
       const filterData = data.docs.map((doc) => ({
@@ -46,6 +46,12 @@ function PaymentReport() {
     getDataFromDb();
   }, []);
   if (allPaymentReportData.length > 0 && !isAwait) {
+    const orderDateTime = (row) => {
+      if (row?.subscriptionDate?.seconds) {
+        return new Date(row?.subscriptionDate?.seconds * 1000).toDateString();
+      }
+      return "";
+    };
     return (
       <>
         <AdminNavBar />
@@ -63,7 +69,7 @@ function PaymentReport() {
             <div
               style={{ textAlign: "center", borderBottom: "1px solid silver" }}
             >
-              <h1>Payment Report</h1>
+              <h1>Subscription & Payment Report</h1>
             </div>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
               <TableHead>
@@ -75,7 +81,13 @@ function PaymentReport() {
                     Payment Id
                   </TableCell>
                   <TableCell align="center" style={{ fontWeight: "bold" }}>
-                    Payment Date
+                    Subscription Date
+                  </TableCell>
+                  <TableCell align="center" style={{ fontWeight: "bold" }}>
+                    Subscription Plan
+                  </TableCell>
+                  <TableCell align="center" style={{ fontWeight: "bold" }}>
+                    Total Paid Amount
                   </TableCell>
                   <TableCell align="center" style={{ fontWeight: "bold" }}>
                     Delete
@@ -88,9 +100,14 @@ function PaymentReport() {
                     key={row.id}
                     sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                   >
-                    <TableCell align="center">{row.customerId}</TableCell>
-                    <TableCell align="center">{row.paymentId}</TableCell>
-                    <TableCell align="center">{row.paymentDate}</TableCell>
+                    <TableCell align="center">{row?.customerId}</TableCell>
+                    <TableCell align="center">{row?.paymentId}</TableCell>
+                    <TableCell align="center">{orderDateTime(row)}</TableCell>
+                    <TableCell align="center">
+                      {row?.subscriptionPlan}
+                    </TableCell>
+                    <TableCell align="center">{row?.totalAmount}</TableCell>
+
                     <TableCell align="center">
                       <Button
                         style={{ backgroundColor: "red" }}

@@ -51,11 +51,8 @@ function AdminNavBar() {
               <Nav.Link as={Link} to="/allorder">
                 All Order
               </Nav.Link>
-              <Nav.Link as={Link} to="/addtrainer">
-                Add Trainer
-              </Nav.Link>
               <Nav.Link as={Link} to="/payment">
-                Payment Report
+                Subscription Report
               </Nav.Link>
             </Nav>
             <Nav>

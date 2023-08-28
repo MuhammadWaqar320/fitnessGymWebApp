@@ -55,7 +55,7 @@ function ChangeProfile() {
           <div
             className="col-sm-4"
             style={{
-              marginTop: "40px",
+              marginTop: "5px",
             }}
           >
             <div
@@ -66,8 +66,8 @@ function ChangeProfile() {
             >
               <img
                 src="https://static.vecteezy.com/system/resources/previews/000/439/863/original/vector-users-icon.jpg"
-                height="180px"
-                width="180px"
+                height="160px"
+                width="160px"
               />
             </div>
 

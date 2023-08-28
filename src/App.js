@@ -7,6 +7,7 @@ import { loadUser } from "./actions/auth";
 import AdminDashboard from "./pages/adminDashboard";
 import Alert from "./components/Alert";
 import About from "./pages/About";
+import AllChatUI from "./pages/allChatUI";
 import { initializeApp } from "firebase/app";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -25,6 +26,8 @@ import ViewProfile from "./pages/viewProfile";
 import ChangeProfile from "./pages/changeProfile";
 import AddDiet from "./pages/addDiet";
 import TrainerChat from "./pages/trainerChat";
+import AllTrainerStudent from "./pages/allTrainerStudent";
+import Appointment from "./pages/Appointment";
 if (localStorage.token) {
   setAuthToken(localStorage.token);
 }
@@ -66,6 +69,9 @@ const App = () => {
           <Route path="/trainerChat">
             <TrainerChat />
           </Route>
+          <Route path="/allTrainerStudent">
+            <AllTrainerStudent />
+          </Route>
           <Route path="/about">
             <About />
           </Route>
@@ -78,6 +84,9 @@ const App = () => {
           <Route path="/services">
             <Services />
           </Route>
+          <Route path="/appointment">
+            <Appointment/>
+          </Route>
           <Route path="/allorder">
             <AllOrder />
           </Route>
@@ -87,6 +96,9 @@ const App = () => {
 
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/allchat">
+            <AllChatUI />
           </Route>
         </Switch>
       </div>

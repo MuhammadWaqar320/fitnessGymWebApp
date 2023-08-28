@@ -33,6 +33,7 @@ function AllOrder() {
       window.alert("Something is went wrong");
     }
   };
+  console.log("All da:", allOrderData);
   useEffect(() => {
     const orderCollectionRef = collection(db, "order");
     const getDataFromDb = async () => {
@@ -47,6 +48,13 @@ function AllOrder() {
     getDataFromDb();
   }, []);
   if (allOrderData.length > 0 && !isAwait) {
+    const orderDateTime = (row) => {
+      if (row?.orderDate?.seconds) {
+        return new Date(row.orderDate.seconds * 1000).toDateString();
+      }
+      console.log("abc ================:", row.orderDate.seconds);
+      return "";
+    };
     return (
       <>
         <AdminNavBar />
@@ -76,6 +84,9 @@ function AllOrder() {
                     Product Id
                   </TableCell>
                   <TableCell align="center" style={{ fontWeight: "bold" }}>
+                    Payment Id
+                  </TableCell>
+                  <TableCell align="center" style={{ fontWeight: "bold" }}>
                     Bill
                   </TableCell>
                   <TableCell align="center" style={{ fontWeight: "bold" }}>
@@ -95,9 +106,11 @@ function AllOrder() {
                     <TableCell component="th" align="center" scope="row">
                       {row.customerId}
                     </TableCell>
-                    <TableCell align="center">{row.productId}</TableCell>
-                    <TableCell align="center">{row.totalBill}</TableCell>
-                    <TableCell align="center">{row.orderDate}</TableCell>
+                    <TableCell align="center">{row?.productId}</TableCell>
+                    <TableCell align="center">{row?.paymentId}</TableCell>
+
+                    <TableCell align="center">{row?.totalBill}</TableCell>
+                    <TableCell align="center">{orderDateTime(row)}</TableCell>
                     <TableCell align="center">
                       <Button
                         style={{ backgroundColor: "red" }}

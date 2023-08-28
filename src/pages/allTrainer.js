@@ -48,6 +48,12 @@ function AllTrainer() {
     getDataFromDb();
   }, []);
   if (allTrainerData.length > 0 && !isAwait) {
+      const orderDateTime = (row) => {
+        if (row?.registerDate?.seconds) {
+          return new Date(row?.registerDate?.seconds * 1000).toDateString();
+        }
+        return "";
+      };
     return (
       <>
         <AdminNavBar />
@@ -83,6 +89,12 @@ function AllTrainer() {
                     Address
                   </TableCell>
                   <TableCell align="center" style={{ fontWeight: "bold" }}>
+                    Age
+                  </TableCell>
+                  <TableCell align="center" style={{ fontWeight: "bold" }}>
+                    Register Date
+                  </TableCell>
+                  <TableCell align="center" style={{ fontWeight: "bold" }}>
                     Delete
                   </TableCell>
                 </TableRow>
@@ -99,6 +111,10 @@ function AllTrainer() {
                     <TableCell align="center">{row.email}</TableCell>
                     <TableCell align="center">{row.phone}</TableCell>
                     <TableCell align="center">{row.address}</TableCell>
+                    <TableCell align="center">{row?.age}</TableCell>
+
+                    <TableCell align="center">{orderDateTime(row)}</TableCell>
+
                     <TableCell align="center">
                       <Button
                         style={{ backgroundColor: "red" }}

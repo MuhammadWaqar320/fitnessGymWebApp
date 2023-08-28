@@ -10,7 +10,7 @@ const Imc = () => {
 
   function calculateBMI(e) {
     e.preventDefault();
-    let bmi = Number(weight / height ** 2).toFixed(2);
+    let bmi = Number(weight / (height * height)).toFixed(2);
     setBmiResult(bmi);
 
     let bmiStatus = getStatus(bmi);

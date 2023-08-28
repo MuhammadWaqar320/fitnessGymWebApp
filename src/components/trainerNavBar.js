@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -7,7 +8,9 @@ import { getAuth } from "firebase/auth";
 import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import Button from "react-bootstrap/esm/Button";
+import RModal from "./ModalCom";
 function TrainerNavBar() {
+  const [show, setShow] = useState(false);
   const history = useHistory();
   useEffect(() => {
     const auth = getAuth();
@@ -47,6 +50,9 @@ function TrainerNavBar() {
               <Nav.Link as={Link} to="/addDiet">
                 Add Diet Plan
               </Nav.Link>
+              <Nav.Link as={Link} to="/allTrainerStudent">
+                All Student
+              </Nav.Link>
             </Nav>
             <Nav>
               <Button onClick={logout}>Logout</Button>
@@ -54,6 +60,7 @@ function TrainerNavBar() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      <RModal show={show} setShow={setShow} />
     </>
   );
 }
