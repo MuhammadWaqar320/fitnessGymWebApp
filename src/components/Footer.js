@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="row">
             <div className="col-md-6 mt-md-0 mt-3">
               <h5 className="fs-6">
-                ©2023 FIT_INN-Health & Fitness Studio Management System. All
+                ©2023 FIT_INN. All
                 rights reserved.
               </h5>
             </div>

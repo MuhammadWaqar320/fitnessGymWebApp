@@ -96,7 +96,7 @@ const Login = ({ login, isAuthenticated }) => {
               style={{ fontFamily: "initial", fontWeight: "bold" }}
             >
               <Link to="/" className="login__logo">
-                FIT_INN-Health & Fitness Studio Management System
+                FIT_INN
               </Link>
             </div>
             <h1

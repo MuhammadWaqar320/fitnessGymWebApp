@@ -42,7 +42,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
         <div className="container shadow p-5 register__form" style={{borderRadius:'20px'}}>
           <div className="text-center" >
             <Link to="/" className="register__logo">
-            Well Come To  FIT_INN-Health & Fitness Studio Management System
+            Well Come To  FIT_INN-Health
             </Link>
           </div>
           <h1
