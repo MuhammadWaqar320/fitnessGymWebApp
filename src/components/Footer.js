@@ -7,12 +7,13 @@ const Footer = () => {
         <div className="container-fluid text-center text-md-left">
           <div className="row">
             <div className="col-md-6 mt-md-0 mt-3">
-              <h5 className="fs-6">©2023 Fitness Gym. All rights reserved.</h5>
+              <h5 className="fs-6">
+                ©2023 FIT_INN-Health & Fitness Studio Management System. All
+                rights reserved.
+              </h5>
             </div>
             <div className="col-md-3 mb-md-0 mb-3">
-              <h5 className="fs-6">
-                Quick
-              </h5>
+              <h5 className="fs-6">Quick</h5>
               <ul className="list-unstyled">
                 <li>
                   <Link to="/" className="footer-link">

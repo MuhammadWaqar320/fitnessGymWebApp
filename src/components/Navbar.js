@@ -63,7 +63,7 @@ const Navbar = ({ auth: { isAuthenticated, loading, user }, logout }) => {
     <nav className="navbar navbar-expand-lg navbar-light fixed-top">
       <div className="container">
         <Link to="/" className="navbar-brand navbar-logo text-white">
-          Fitness Gym 
+          FIT_INN-Health & Fitness Studio Management System
         </Link>
         <button
           className="navbar-toggler"

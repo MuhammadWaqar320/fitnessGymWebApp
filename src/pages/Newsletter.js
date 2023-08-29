@@ -5,7 +5,9 @@ const Newsletter = () => {
   return (
     <section className="container pb-5 newsletter">
       <div className="containaer-fluid rounded py-5 bg-white shadow px-5">
-        <h3 className="display-5 title">About Fitness Gym</h3>
+        <h3 className="display-5 title">
+          About FIT_INN-Health & Fitness Studio Management System
+        </h3>
         <p className="about__description pt-1" style={{ color: "black" }}>
           We are a company that seeks to improve the quality of life of our
           clients, for this we have excellent teachers and dynamic classes to

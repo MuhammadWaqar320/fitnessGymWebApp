@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 import { Link, Redirect } from "react-router-dom";
 import "./main.css";
 import { auth } from "../firebaseConfig";
+import Navbar from "../components/Navbar";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import {
   getDocs,
@@ -78,8 +79,9 @@ const Login = ({ login, isAuthenticated }) => {
   }
   console.log("role", role);
   return (
-    <section>
-      <div className="container w-75 my-5 shadow">
+    <section style={{ background: "#1d0e15" }}>
+      <Navbar />
+      <div className="container w-75 my-5 shadow" style={{ padding: "40px" }}>
         <div className="row align-items-stretch">
           <div
             className="col bg-white"
@@ -94,7 +96,7 @@ const Login = ({ login, isAuthenticated }) => {
               style={{ fontFamily: "initial", fontWeight: "bold" }}
             >
               <Link to="/" className="login__logo">
-                Fitness Gym
+                FIT_INN-Health & Fitness Studio Management System
               </Link>
             </div>
             <h1
