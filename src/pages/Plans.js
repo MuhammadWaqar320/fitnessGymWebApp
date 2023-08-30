@@ -17,7 +17,7 @@ const Plans = () => {
             </div>
             <div className="card-body">
               <h1 className="card-title pricing-card-title">
-                50.000Rs<small className="text-muted fw-light">/mes</small>
+                50$<small className="text-muted fw-light">/month</small>
               </h1>
               <ul className="list-unstyled mt-3 mb-4">
                 <li className="d-flex align-items-center justify-content-center">
@@ -58,7 +58,7 @@ const Plans = () => {
             </div>
             <div className="card-body">
               <h1 className="card-title pricing-card-title">
-                70.000Rs<small className="text-muted fw-light">/mes</small>
+                70$<small className="text-muted fw-light">/month</small>
               </h1>
               <ul className="list-unstyled mt-3 mb-4">
                 <li className="d-flex align-items-center justify-content-center">
@@ -99,7 +99,7 @@ const Plans = () => {
             </div>
             <div className="card-body">
               <h1 className="card-title pricing-card-title">
-                100.000Rs<small className="text-muted fw-light">/mes</small>
+                100$<small className="text-muted fw-light">/month</small>
               </h1>
               <ul className="list-unstyled mt-3 mb-4">
                 <li className="d-flex align-items-center justify-content-center">
